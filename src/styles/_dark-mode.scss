@@ -1,0 +1,48 @@
+$purple: #9e77dd;
+$teal: #06ccbb;
+
+.dark-mode {
+  background: #121212;
+
+  p {
+    color: white;
+    opacity: 86%;
+  }
+
+  .title {
+    color: $purple;
+  }
+
+  .subtitle {
+    color: $teal;
+  }
+
+  .is-link {
+    background-color: $teal;
+    color: black;
+  }
+
+  .is-link:hover,
+  .is-link:focus {
+    background-color: $teal;
+    opacity: 75%;
+    color: black;
+  }
+
+  input {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+
+    &::placeholder {
+      color: white;
+    }
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    &:focus {
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
