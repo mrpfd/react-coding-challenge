@@ -1,6 +1,9 @@
-# Dark Mode Coding Challenge
+# MRP React Coding Challenge
 
 ### Time required: ~30 minutes
+
+## Overview
+The goal of this challange is to add dark mode functionality to a single page application, it is intended to help us better understand your approach to solving problems using React and JavaScript.
 
 ## Requirements
 - Add dark-mode switching functionality to the *existing* dark-mode button
@@ -12,3 +15,6 @@
 ## Bonus Objectives
 - How we would use Dark mode on other potential routes/components in a bigger application. Would your solution work for this?
 - How we can apply a class to the `html` DOM element
+
+## Dependancies
+The only dependency for this challenge is NodeJS/NPM. Aside from your editor of choice, you should not need any additional software to complete this challenge.
