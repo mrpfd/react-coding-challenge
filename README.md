@@ -6,7 +6,7 @@
 The goal of this challange is to add dark mode functionality to a single page application, it is intended to help us better understand your approach to solving problems using React and JavaScript.
 
 ## Requirements
-- Add dark-mode switching functionality to the *existing* dark-mode button.
+- Add dark-mode switching functionality to the existing sun/moon (dark-mode) button.
   - Utilise the existing dark-mode scss file by adding a `dark-mode` class to the `html` element.
 - When in Dark mode:
   - The button icon should be `faSun`.
