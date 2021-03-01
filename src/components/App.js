@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.scss';
 import { Articles } from './Articles';
 import { Header } from './Header';
+import { InputForm } from './InputForm';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -15,19 +16,8 @@ function App() {
     <div className={globalTheme}>
       <Header theme={theme} themeToggler={themeToggler} />
       <Articles />
-
-      <div className="field">
-        <div className="control">
-          <input className="input" type="text" placeholder="Name" />
-        </div>
-      </div>
-
-      <div className="field">
-        <div className="control">
-          <input className="input" type="text" placeholder="Email" />
-        </div>
-      </div>
-
+      <InputForm />
+      
       <section className="section">
         <div className="buttons level-right">
           <button className="button is-link">Submit</button>
