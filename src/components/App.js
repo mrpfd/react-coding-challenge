@@ -1,20 +1,25 @@
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, {useState} from 'react';
 
 import './App.scss';
 
 function App() {
+  const [theme, setTheme] = useState('light');
+  const themeToggler = () => {
+    theme === 'light' ? setTheme('dark') : setTheme('light')
+  }
+
   return (
-    <div className="app">
+    <div className={theme === 'dark' ? 'app dark-mode' : 'app'}>
       <div className="level">
         <div>
           <h1 className="title">Dark Mode Challenge</h1>
         </div>
 
         {/* --The button that should toggle dark mode-- */}
-        <button className="app__dark-mode-btn icon level-right">
-          <FontAwesomeIcon icon={faMoon} />
+        <button onClick={themeToggler} className="app__dark-mode-btn icon level-right">
+          <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} color={theme === 'dark' ? '#FFA500' : 'black'} />
         </button>
 
       </div>
