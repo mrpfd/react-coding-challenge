@@ -4,6 +4,7 @@ import { Articles } from './Articles';
 import { Button } from './Button';
 import { Header } from './Header';
 import { InputForm } from './InputForm';
+import { ThemePickerButton } from './ThemePickerButton';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -15,7 +16,9 @@ function App() {
 
   return (
     <div className={globalTheme}>
-      <Header theme={theme} themeToggler={themeToggler} />
+      <Header>
+        <ThemePickerButton theme={theme} themeToggler={themeToggler} />
+      </Header>
       <Articles />
       <InputForm />
       <Button />
