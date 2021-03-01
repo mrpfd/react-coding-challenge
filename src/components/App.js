@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
+import withTheme from '../hocs/withTheme';
 import './App.scss';
 import { Articles } from './Articles';
 import { Button } from './Button';
@@ -6,24 +7,19 @@ import { Header } from './Header';
 import { InputForm } from './InputForm';
 import { ThemePickerButton } from './ThemePickerButton';
 
-function App() {
-  const [theme, setTheme] = useState('light');
-  const themeToggler = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light')
-  }
-
-  const globalTheme = theme === 'dark' ? 'app dark-mode' : 'app' 
-
+const App = (props) => {
   return (
-    <div className={globalTheme}>
+    <>
       <Header>
-        <ThemePickerButton theme={theme} themeToggler={themeToggler} />
+        <ThemePickerButton theme={props.theme} themeToggler={props.themeToggler} />
       </Header>
       <Articles />
       <InputForm />
       <Button />
-    </div>
+    </>
   );
 }
 
-export default App;
+const ThemedHomeComponent = withTheme(App);
+
+export default ThemedHomeComponent;
