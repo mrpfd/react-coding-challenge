@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.scss';
 import { Articles } from './Articles';
+import { Button } from './Button';
 import { Header } from './Header';
 import { InputForm } from './InputForm';
 
@@ -17,12 +18,7 @@ function App() {
       <Header theme={theme} themeToggler={themeToggler} />
       <Articles />
       <InputForm />
-      
-      <section className="section">
-        <div className="buttons level-right">
-          <button className="button is-link">Submit</button>
-        </div>
-      </section>
+      <Button />
     </div>
   );
 }
